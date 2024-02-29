@@ -7,7 +7,10 @@
 
 @if ($message = Session:: get('success'))
  <p class="alert alert-success" >{{$message}}</p> 
- 
+@endif
+
+@if ($message = Session:: get('deleted'))
+ <p class="alert alert-danger" >{{$message}}</p> 
 @endif
 
 <table class="table table-brodered" >
@@ -29,7 +32,7 @@
     <a class="btn btn-secondary" href="{{ route('products.edit',$pr->id) }}">edit</a> 
     @csrf
      @method('DELETE')
-     <button type="submit" class="btn btn-danger">Delete</button>
+     <button type="submit" class="btn btn-danger" onclick='return confirm("are you sure you want to delete {{ $pr->name }} permentally")' >Delete</button>
     </form>     
 
     </td>
