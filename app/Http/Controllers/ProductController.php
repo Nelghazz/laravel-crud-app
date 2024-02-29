@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -12,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-    $product = Product::latest()->paginate(5);
+    $product = Product::latest()->paginate(3);
     return view('products.index',compact('product'))->with(request()->input('page'));
     }
 
@@ -67,8 +68,9 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(Request $request)
     {
         //
+
     }
 }

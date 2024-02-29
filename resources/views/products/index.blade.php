@@ -1,8 +1,7 @@
 @extends('products.layout')
 @section('content')
 <div class="row">
-<div-class="col-1g-12"> <div class="pull-left">
- <h2>Laravel CRUD </h2> </div> <div class="pull-right">
+<div-class="col-1g-12">  <div class="pull-right">
 <a class="btn btn-success" href="{{ route ('products.create') }}"> Create New Product +</a> </div>
 </div> </div>
 

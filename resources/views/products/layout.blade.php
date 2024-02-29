@@ -7,7 +7,7 @@
     <title>laravel crud app</title>
 </head>
 <body>
-    <h1>laravel crud app</h1>
+    <h1 class="text-center mt-4" >laravel crud app</h1>
     <div class="container" >
         <br>
         @yield('content')
