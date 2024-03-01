@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
 <div-class="col-1g-12">  <div class="pull-right">
-<a class="btn btn-success" href="{{ route ('products.create') }}"> Create New Product +</a> </div>
+<a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product +</a> </div>
 </div> </div>
 
 @if ($message = Session:: get('success'))

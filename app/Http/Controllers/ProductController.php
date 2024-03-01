@@ -8,6 +8,15 @@ use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
+
+   /**
+     * Route for the landing page
+     */
+
+    public function indexRedirect(){
+        return redirect()->route('products.index');
+    }
+
     /**
      * Display a listing of the resource.
      */

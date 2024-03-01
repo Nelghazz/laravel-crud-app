@@ -14,7 +14,6 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::resource('/products',ProductController::class);
+Route::get('/', [ProductController::class, 'indexRedirect'])->name('home');
+
+Route::resource('products', ProductController::class);
